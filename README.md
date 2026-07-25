@@ -40,7 +40,9 @@ doesn't.
 ## Requirements
 
 - **omp** with extension support (developed against 17.1.2)
-- **infinitty** (developed against 0.1.9)
+- **infinitty 0.1.9 or newer.** The `todos` control command does not exist in
+  0.1.8 and earlier — those builds answer `error: unknown command 'todos'`.
+  Check with `printf 'version\n' | nc -U /tmp/infinitty-current.sock`.
 - For the remote setup: OpenSSH 6.7+ on both ends, for Unix-socket forwarding
 
 ## Install
@@ -188,6 +190,7 @@ INFINITTY_OMP_DEBUG=1 omp
 | `no infinitty socket in env; inert` | No variable resolved. Check the table above; remember a multiplexer server may hold a stale environment. |
 | `socket error: ENOENT` | The path doesn't exist. Locally, the pane died. Remotely, the SSH forward isn't up. |
 | `socket error: ECONNREFUSED` | A stale socket file with nothing listening. Set `StreamLocalBindUnlink yes` on the remote `sshd`. |
+| `infinitty rejected: error: unknown command 'todos'` | infinitty is older than 0.1.9. Upgrade; note that the npm package can lag the GitHub release. |
 | `infinitty rejected: error: …` | The command reached infinitty and was refused — usually a pane id that no longer exists. |
 | Nothing logged at all | The extension didn't load. Check `omp plugin list`, and restart the session. |
 
