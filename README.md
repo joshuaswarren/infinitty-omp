@@ -1,6 +1,6 @@
 # infinitty-omp
 
-Publishes [omp](https://oh-my-pi.dev)'s todo list to an
+Publishes [omp](https://omp.sh)'s todo list to an
 [infinitty](https://infinitty.ai) pane, so the pane header's checklist icon
 tracks what the agent is actually doing — including when omp runs on a
 different machine.
@@ -221,7 +221,7 @@ without needing infinitty (or macOS) present.
 - [infinitty](https://github.com/jasonkneen/infinitty) — the terminal. Its
   control-socket protocol is documented in the README and implemented in
   `Sources/InfinittyKit/ControlServer.swift` and `AppControlServer.swift`.
-- [omp](https://oh-my-pi.dev) — the coding agent. Extension events are
+- [omp](https://omp.sh) — the coding agent. Extension events are
   documented under `omp://extensions.md`; the todo tool's result shape under
   `omp://tools/todo.md`.
 
