@@ -1,0 +1,25 @@
+{
+  "name": "infinitty-omp",
+  "version": "0.1.0",
+  "description": "Publishes omp's todo list to an infinitty pane's checklist icon, locally or over SSH.",
+  "license": "MIT",
+  "author": "Joshua Warren",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshuaswarren/infinitty-omp.git"
+  },
+  "homepage": "https://github.com/joshuaswarren/infinitty-omp#readme",
+  "keywords": ["omp", "infinitty", "terminal", "coding-agent", "extension"],
+  "type": "module",
+  "main": "index.ts",
+  "files": ["index.ts", "README.md", "LICENSE"],
+  "omp": {
+    "extensions": ["./index.ts"]
+  },
+  "scripts": {
+    "test": "bun test"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}
